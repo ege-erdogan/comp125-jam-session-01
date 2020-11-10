@@ -8,3 +8,21 @@ Write a program that takes strings from standard input indicating what your cust
 Once you are done selling, input "0", and have the program print out the number of muffins and cupcakes remaining, in the form "muffins: 9 cupcakes: 3" (if there were 9 muffins and 3 cupcakes left, for example).
 '''
 
+muffins = 5
+cupcakes = 2
+
+order = ''
+while order != '0':
+    order = input('Enter your order: ')
+    if order == 'muffin':
+        if muffins == 0:
+            print('Out of stock.')
+        else:
+            muffins -= 1
+    elif order == 'cupcake':
+        if cupcakes == 0:
+            print('Out of stock.')
+        else:
+            cupcakes -= 1
+
+print(f'muffins: {muffins}, cupcakes: {cupcakes}')
